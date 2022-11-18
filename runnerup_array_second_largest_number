@@ -1,0 +1,11 @@
+if __name__ == '__main__':
+    n = int(input())
+    arr = map(int, input().split())
+    A = list(arr)
+    uniquelist = []
+    for x in A:
+        if x not in uniquelist:
+            uniquelist.append(x)
+    uniquelist.sort()
+    uniquelist.pop()
+    print(uniquelist[-1])
