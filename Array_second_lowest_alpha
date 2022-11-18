@@ -1,0 +1,16 @@
+if __name__ == '__main__':
+    nameScore = []
+    temp = []
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        temp.append(score)
+        nameScore.append([score,name])
+
+    nameScore.sort()
+    temp1 = set(temp)
+    temp2 = list(temp1)
+    temp2.sort()
+    for i in range(len(nameScore)):
+        if nameScore[i][0] == temp2[1]:
+            print(nameScore[i][1])
